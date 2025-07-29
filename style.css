@@ -50,11 +50,13 @@ footer {
 }
 .banner-img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  max-height: 250px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 1; /* Forces a nice rectangular shape */
   object-fit: contain;
 }
+
 
 .bio-img {
   width: 200px;
