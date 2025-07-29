@@ -71,3 +71,45 @@ footer {
   width: 300px;
   text-align: center;
 }
+.terminal-nav {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2f3e2e;
+  margin: 2rem 0;
+  letter-spacing: 1px;
+}
+
+.terminal-nav a {
+  color: #2f3e2e;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.terminal-nav a:hover {
+  color: #d1c7a2;
+  text-shadow: 0 0 3px rgba(0,0,0,0.4);
+  text-decoration: underline;
+}
+
+.terminal-nav .divider {
+  opacity: 0.5;
+  padding: 0 0.2rem;
+}
+.terminal-nav::before,
+.terminal-nav::after {
+  animation: blink 1s steps(2, start) infinite;
+}
+/* this is where the blinky stuff starts */
+.terminal-nav::before {
+  content: '<';
+}
+
+.terminal-nav::after {
+  content: '>';
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
