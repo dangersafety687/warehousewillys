@@ -5,6 +5,17 @@ body {
   background-color: #f1e3c6;
   color: #2f3e2e;
 }
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
 nav {
   text-align: center;
   background-color: #2f3e2e;
