@@ -47,8 +47,8 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: 400px;
-      object-fit: cover;
+      max-height: 200px;
+      object-fit: contain;
       margin: 0 auto;
     }
     .bio-img {
@@ -56,6 +56,16 @@
       border-radius: 8px;
       display: block;
       margin-bottom: 1rem;
+    }
+    .bio-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .bio-box {
+      width: 300px;
+      text-align: center;
     }
   </style>
   <script>
@@ -89,7 +99,7 @@
 
   <template id="about">
     <h2>About Us</h2>
-    <p>Grime Busters Cleaning Co. is the passion project of Ashley and Whitney — two hard-working moms on a mission to scrub, sanitize, and serve their community with pride. Whether you're moving in, moving out, or just need your space looking sharp, we’ve got the tools and tenacity to make it shine.</p>
+    <p>Grime Busters Cleaning Co. is the passion project of Ashley and Whitney — two hard-working moms on a mission to scrub, sanitize, and serve their community with pride. Whether you're moving in, moving out, or just need your space looking sharp, we’ve got the tools and tenacity to make it shine. Proudly servicing Poteau, Heavener, Pocola, Hackett, Fort Smith, Greenwood, Spiro, and the surrounding areas with professionalism and a personal touch.</p>
   </template>
 
   <template id="services">
@@ -109,7 +119,7 @@
 
   <template id="contact">
     <h2>Contact Us</h2>
-    <form action="mailto:derek.ware.05@gmail.com" method="POST" enctype="text/plain">
+    <form action="mailto:grimebusterslegacy@gmail.com" method="POST" enctype="text/plain">
       <label for="name">Name</label><br>
       <input type="text" id="name" name="name" required><br><br>
 
@@ -134,13 +144,18 @@
 
   <template id="biographies">
     <h2>Meet the Team</h2>
-    <h3>Ashley</h3>
-    <img src="Ashley01.jpg" alt="Ashley" class="bio-img">
-    <p>Ashley is a passionate mom and entrepreneur with an eye for detail and a heart for helping others. Her strong work ethic and upbeat energy keep every job flowing smoothly and efficiently.</p>
-
-    <h3>Whitney</h3>
-    <img src="Ashley03.jpg" alt="Whitney" class="bio-img">
-    <p>Whitney brings determination and precision to the team. Her commitment to excellence and spotless results ensures every client is beyond satisfied. Together with Ashley, she's helping build a cleaning legacy.</p>
+    <div class="bio-container">
+      <div class="bio-box">
+        <h3>Ashley</h3>
+        <img src="Ashley01.jpg" alt="Ashley" class="bio-img">
+        <p>Ashley is a passionate mom and entrepreneur with an eye for detail and a heart for helping others. Her strong work ethic and upbeat energy keep every job flowing smoothly and efficiently.</p>
+      </div>
+      <div class="bio-box">
+        <h3>Whitney</h3>
+        <img src="Ashley03.jpg" alt="Whitney" class="bio-img">
+        <p>Whitney brings determination and precision to the team. Her commitment to excellence and spotless results ensures every client is beyond satisfied. Together with Ashley, she's helping build a cleaning legacy.</p>
+      </div>
+    </div>
   </template>
 </body>
 </html>
