@@ -1,32 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hey Neighbor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grime Busters Cleaning Co.</title>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
+      margin: 0;
       font-family: 'Courier New', Courier, monospace;
+      background-color: #f1e3c6;
+      color: #2f3e2e;
+    }
+    nav {
       text-align: center;
-      padding: 100px 20px;
+      background-color: #2f3e2e;
     }
-    h1 {
-      font-size: 3.2em;
-      margin-bottom: 20px;
+    nav a {
+      color: #f1e3c6;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-block;
+      padding: 0.75rem 0;
     }
-    p {
-      font-size: 1.6em;
-      margin-top: 10px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .spaced {
-      margin-top: 100px;
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .services ul {
+      list-style: square;
+      margin-left: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3b4e3f;
+      color: #fff;
+    }
+    .cta {
+      background-color: #d1c7a2;
+      text-align: center;
+      padding: 2rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .banner-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
-  <h1>..well hello there, neighbor.</h1>
-  <p>Yes, you, Ashley. ;)</p>
-  <p class="spaced">..wait, does this make me your boss now? Or Joy's boss? Who's boss am I? I know I am someone's boss.</p>
+  <img src="MockUpLogo02.png" alt="Grime Busters Banner" class="banner-img" />
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+      Grime Busters Cleaning Co. is the passion project of Ashley and Alicia — two hard-working moms on a mission to scrub, sanitize, and serve their community with pride. Whether you're moving in, moving out, or just need your space looking sharp, we’ve got the tools and tenacity to make it shine.
+    </p>
+  </section>
+
+  <section class="section services" id="services">
+    <h2>Services</h2>
+    <h3>Residential Cleaning – $0.10 per sq ft</h3>
+    <ul>
+      <li>Whole-home deep cleans</li>
+      <li>Kitchen & bathroom sanitizing</li>
+      <li>Dusting and baseboard cleaning</li>
+      <li>Mopping, vacuuming, sweeping</li>
+      <li>Move-in & move-out cleaning</li>
+      <li>Interior window cleaning</li>
+    </ul>
+    <h3>Commercial Cleaning – Contact for Quote</h3>
+    <p>We serve offices, retail stores, rentals, salons, and medical/dental offices. Pricing is based on size and cleaning frequency.</p>
+  </section>
+
+  <section class="cta">
+    Ready to bust some grime? Contact us today for a free quote!
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:grimebusterscleaningco@gmail.com">grimebusterscleaningco@gmail.com</a></p>
+    <p>Facebook: <a href="#">@GrimeBustersCleaningCo</a></p>
+    <p>Phone: (555) 123-4567</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Grime Busters Cleaning Co. — All rights reserved.
+  </footer>
 </body>
 </html>
-
