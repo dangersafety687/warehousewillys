@@ -50,10 +50,9 @@ footer {
 }
 .banner-img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
-  aspect-ratio: 4 / 1; /* Forces a nice rectangular shape */
+  max-height: 250px;
   object-fit: contain;
 }
 
