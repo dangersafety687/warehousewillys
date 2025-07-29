@@ -52,6 +52,7 @@ footer {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 250px;
   object-fit: cover;
 }
 
@@ -100,7 +101,6 @@ footer {
 .terminal-nav::after {
   animation: blink 1s steps(2, start) infinite;
 }
-/* this is where the blinky stuff starts */
 .terminal-nav::before {
   content: '<';
 }
