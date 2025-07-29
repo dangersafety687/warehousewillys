@@ -30,10 +30,6 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    .services ul {
-      list-style: square;
-      margin-left: 2rem;
-    }
     footer {
       text-align: center;
       padding: 1rem;
@@ -49,29 +45,54 @@
     }
     .banner-img {
       display: block;
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      max-height: 400px;
+      object-fit: cover;
       margin: 0 auto;
     }
+    .bio-img {
+      width: 200px;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 1rem;
+    }
   </style>
+  <script>
+    function loadSection(id) {
+      const template = document.getElementById(id);
+      const content = document.getElementById('content');
+      content.innerHTML = template.innerHTML;
+    }
+
+    window.onload = function() {
+      loadSection('about');
+    };
+  </script>
 </head>
 <body>
-  <img src="MockUpLogo02.png" alt="Grime Busters Banner Goes Here" class="banner-img" />
+  <img src="MockUpLogo02.png" alt="Grime Busters Banner" class="banner-img" />
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="loadSection('about')">About</a>
+    <a href="#" onclick="loadSection('services')">Services</a>
+    <a href="#" onclick="loadSection('contact')">Contact</a>
+    <a href="#" onclick="loadSection('testimonials')">Testimonials</a>
+    <a href="#" onclick="loadSection('biographies')">Biographies</a>
   </nav>
 
-  <section class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-      Grime Busters Cleaning Co. is the passion project of Ashley and Alicia — two hard-working moms on a mission to scrub, sanitize, and serve their community with pride. Whether you're moving in, moving out, or just need your space looking sharp, we’ve got the tools and tenacity to make it shine.
-    </p>
-  </section>
+  <section id="content" class="section"></section>
 
-  <section class="section services" id="services">
+  <footer>
+    &copy; 2025 Grime Busters Cleaning Co. — All rights reserved.
+  </footer>
+
+  <template id="about">
+    <h2>About Us</h2>
+    <p>Grime Busters Cleaning Co. is the passion project of Ashley and Whitney — two hard-working moms on a mission to scrub, sanitize, and serve their community with pride. Whether you're moving in, moving out, or just need your space looking sharp, we’ve got the tools and tenacity to make it shine.</p>
+  </template>
+
+  <template id="services">
     <h2>Services</h2>
     <h3>Residential Cleaning – $0.10 per sq ft</h3>
     <ul>
@@ -84,21 +105,42 @@
     </ul>
     <h3>Commercial Cleaning – Contact for Quote</h3>
     <p>We serve offices, retail stores, rentals, salons, and medical/dental offices. Pricing is based on size and cleaning frequency.</p>
-  </section>
+  </template>
 
-  <section class="cta">
-    Ready to bust some grime? Contact us today for a free quote!
-  </section>
+  <template id="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:derek.ware.05@gmail.com" method="POST" enctype="text/plain">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:grimebusterscleaningco@gmail.com">grimebusterscleaningco@gmail.com</a></p>
-    <p>Facebook: <a href="#">@GrimeBustersCleaningCo</a></p>
-    <p>Phone: (555) 123-4567</p>
-  </section>
+      <label for="phone">Phone Number</label><br>
+      <input type="tel" id="phone" name="phone"><br><br>
 
-  <footer>
-    &copy; 2025 Grime Busters Cleaning Co. — All rights reserved.
-  </footer>
+      <label for="email">Email Address</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </template>
+
+  <template id="testimonials">
+    <h2>Testimonials</h2>
+    <p>“The cleanest my house has ever been! Ashley and Whitney are amazing!” – Happy Customer</p>
+    <p>“They tackled our office and made it shine like new.” – Local Business Owner</p>
+  </template>
+
+  <template id="biographies">
+    <h2>Meet the Team</h2>
+    <h3>Ashley</h3>
+    <img src="Ashley01.jpg" alt="Ashley" class="bio-img">
+    <p>Ashley is a passionate mom and entrepreneur with an eye for detail and a heart for helping others. Her strong work ethic and upbeat energy keep every job flowing smoothly and efficiently.</p>
+
+    <h3>Whitney</h3>
+    <img src="Ashley03.jpg" alt="Whitney" class="bio-img">
+    <p>Whitney brings determination and precision to the team. Her commitment to excellence and spotless results ensures every client is beyond satisfied. Together with Ashley, she's helping build a cleaning legacy.</p>
+  </template>
 </body>
 </html>
